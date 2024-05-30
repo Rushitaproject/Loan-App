@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "392538347746",
+    "project_id": "instant-borrow-money-advise",
+    "storage_bucket": "instant-borrow-money-advise.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392538347746:android:186dd6ba53df2fe646a6bb",
+        "android_client_info": {
+          "package_name": "com.borrow.money.cash.loan.loanguide"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMnXE-onySw2ZuzJIZFY3G3Pp9h9y1WdQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activityMoney.calculatorMoney.EmiCalMoney_34"
+    android:background="@color/screenBGC">
+
+    <include
+        android:id="@+id/conToolbar"
+        layout="@layout/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:id="@+id/first"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/generalsans_bold"
+                                android:text="@string/loan_emi_calculater"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/board"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/first"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_15sdp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/generalsans_bold"
+                                    android:gravity="center"
+                                    android:text="@string/principal_amount"
+                                    android:textColor="#000"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:fontFamily="@font/generalsans_bold"
+                                    android:text="$"
+                                    android:textColor="@color/redColor"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:background="@drawable/bg_btn"
+                                android:padding="5dp">
+
+                                <EditText
+                                    android:id="@+id/prime_amount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="40dp"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/generalsans_medium"
+                                    android:hint="10000"
+                                    android:inputType="numberDecimal"
+                                    android:paddingLeft="10dp"
+                                    android:textColor="@color/title_color"
+                                    android:textColorHint="@color/result"
+                                    android:textSize="@dimen/_16sdp" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/generalsans_bold"
+                                    android:gravity="start|center_vertical"
+                                    android:text="@string/interest"
+                                    android:textColor="#000"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:fontFamily="@font/generalsans_bold"
+                                    android:text="%"
+                                    android:textColor="@color/redColor"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:background="@drawable/bg_btn"
+                                android:padding="5dp">
+
+                                <EditText
+                                    android:id="@+id/interest_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/generalsans_medium"
+                                    android:hint="6.2"
+                                    android:inputType="numberDecimal"
+                                    android:paddingLeft="10dp"
+                                    android:textColor="@color/title_color"
+                                    android:textColorHint="@color/result"
+                                    android:textSize="@dimen/_16sdp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:fontFamily="@font/generalsans_bold"
+                                android:text="@string/loan_tenure"
+                                android:textColor="#000"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:background="@drawable/bg_btn"
+                                android:padding="5dp">
+
+                                <EditText
+                                    android:id="@+id/year_btn"
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/generalsans_medium"
+                                    android:hint="year"
+                                    android:inputType="numberDecimal"
+                                    android:paddingLeft="10dp"
+                                    android:textColor="@color/title_color"
+                                    android:textColorHint="@color/result"
+                                    android:textSize="@dimen/_16sdp" />
+
+                                <EditText
+                                    android:id="@+id/month"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:background="#fff"
+                                    android:hint="month"
+                                    android:paddingLeft="10dp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/year_bt"
+                                    android:layout_width="60dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toLeftOf="@+id/imgtran"
+                                    android:fontFamily="@font/generalsans_medium"
+                                    android:gravity="center"
+                                    android:text="@string/year"
+                                    android:textColor="@color/redColor"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/imgtran"
+                                    android:layout_width="@dimen/_15sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toLeftOf="@+id/mont_id"
+                                    android:src="@drawable/imgtansfer" />
+
+                                <TextView
+                                    android:id="@+id/mont_id"
+                                    android:layout_width="60dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="15dp"
+                                    android:fontFamily="@font/generalsans_medium"
+                                    android:gravity="center"
+                                    android:text="@string/month"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/board"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/reset"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:fontFamily="@font/generalsans_bold"
+                                android:gravity="center"
+                                android:text="@string/reset_calculation"
+                                android:textColor="@color/redColor"
+                                android:textSize="@dimen/_16sdp" />
+
+
+                            <Button
+                                android:id="@+id/calculat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginHorizontal="@dimen/_50sdp"
+                                android:layout_marginBottom="@dimen/_15sdp"
+                                android:text="@string/calculate_your_emi"
+                                android:paddingHorizontal="@dimen/_25sdp"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:textColor="@color/white" />
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </ScrollView>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
